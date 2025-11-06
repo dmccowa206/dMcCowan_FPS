@@ -8,3 +8,11 @@ The BP_FPSWeapon actor was created as a child of ShooterWeaponBase. In the edito
 - Move with WASD
 - Walk over the gun pickup to equip the weapon
 - Aim and Shoot with the mouse
+
+I succcessfully brought the template AI controlled NPC over to the main level. In order for the AI to be able to move, I had to add a Nav mesh to the level. I faced some difficulties getting the AI to properly see the player. In order to fix this, I remove the first-person mesh from the NPC model and widened the view checking for the AI's sight.
+
+ - The AI will pick random nearby positions to "search" by walking over to them.
+ - If the AI partially sees the player or otherwise senses them it will "investigate" by facing and walking directly over to the location of the sighting.
+ - If the AI finds the player, it will begin shooting. Its shots deal damage to the player.
+ - Depending on the weapon equipped, the AI will stop shooting to reload.
+ - When the AI is killed, all of its logic processes are stopped as well.
