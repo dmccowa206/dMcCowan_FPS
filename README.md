@@ -16,3 +16,5 @@ I succcessfully brought the template AI controlled NPC over to the main level. I
  - If the AI finds the player, it will begin shooting. Its shots deal damage to the player.
  - Depending on the weapon equipped, the AI will stop shooting to reload.
  - When the AI is killed, all of its logic processes are stopped as well.
+
+Waves will end when all enemies have been killed. The next wave will spawn 5 seconds after the last enemy died. Waves will have progressively more enemies. As the number of enemies spawn increases, their spawns will be staggered.
